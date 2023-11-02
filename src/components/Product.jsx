@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
 const Product = ({ product }) => {
-  const imgurl = product.image;
-  console.log(imgurl);
+
+  const PUBLIC_URL = '.'
+  const imgurl = `${PUBLIC_URL}${product.image}`
   return (
     <Card className="my-3 p-3 rounded">
       <Link to={`/product/${product._id}`}>
